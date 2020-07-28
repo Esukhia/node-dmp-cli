@@ -4,11 +4,11 @@ Command Line Application for Google's diff-match-patch
 # Usage
 text1.txt contains
 ```
-Hello World
+Hello World.
 ```
 text2.txt
 ```
-Goodbye World
+Goodbye World.
 ```
 ## Linux
 ```bash

@@ -4,13 +4,15 @@ var program = require('commander');
 var dmp_module = require("./diff_match_patch.js");
 
 var dmp = new dmp_module.diff_match_patch();
+dmp.Diff_Timeout = 0
 
 function log_list_of_tuples(diffs) {
   // log diffs in list of tuple like
   // [(-1, "Hell"), (1, "G"), (0, "o"), (1, "odbye"), (0, " World.")]
+  // line-return in string are replaced with '_'
   console.log('[')
   for (var d of diffs) {
-    console.log('(' + d[0] + ', ' + '"' + d[1] + '"' + '),');
+    console.log('(' + d[0] + ', ' + '"' + d[1].replace('\n', '\\-n') + '"' + '),');
   }
   console.log(']')
 }

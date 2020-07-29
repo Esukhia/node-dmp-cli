@@ -1,6 +1,6 @@
 {
   "name": "dmp-cli",
-  "version": "1.0.0",
+  "version": "0.0.3",
   "description": "Command Line Application for Google's diff-match-patch",
   "main": "index.js",
   "scripts": {

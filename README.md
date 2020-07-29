@@ -26,7 +26,7 @@ $ dmp diff text1.txt text2.txt
 $ dmp text1.txt text2.txt
 ```
 
-## Linux
+## Windows
 ```bash
 C:\dmp.exe diff text1.txt text2.txt
 ```

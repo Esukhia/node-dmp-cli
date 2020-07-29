@@ -7,14 +7,15 @@ var dmp = new dmp_module.diff_match_patch();
 dmp.Diff_Timeout = 0
 
 function log_list_of_tuples(diffs) {
-  // log diffs in list of tuple like
-  // [(-1, "Hell"), (1, "G"), (0, "o"), (1, "odbye"), (0, " World.")]
-  // line-return in string are replaced with '_'
-  console.log('[')
+  // log diffs into json like {"diffs": <list-of-tuples>}
+  var diffs_arr = []
+  diffs_string = '['
   for (var d of diffs) {
-    console.log('(' + d[0] + ', ' + '"' + d[1].replace('\n', '\\-n') + '"' + '),');
+    diffs_arr.push([d[0], d[1].replace('\n', '\\n')])
   }
-  console.log(']')
+
+  diffs_json = JSON.stringify(diffs_arr)
+  console.log(diffs_json)
 }
 
 function diff(text1_path, text2_path) {
@@ -30,7 +31,7 @@ function diff(text1_path, text2_path) {
 }
 
 program
-  .version('0.0.1')
+  .version('0.0.3')
   .command('diff <text1_path> <text2_path>')
   .description('Compute diff between text1 and text2')
   .action(diff);

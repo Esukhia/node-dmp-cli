@@ -11,6 +11,8 @@ text2.txt
 Goodbye World.
 ```
 ## Linux
+[![](https://img.icons8.com/fluent/20/000000/download.png)](https://github.com/Esukhia/node-dmp-cli/releases/download/v0.0.3/linux.zip) Download v0.0.3
+
 ```bash
 $ dmp diff text1.txt text2.txt
 [
@@ -22,11 +24,15 @@ $ dmp diff text1.txt text2.txt
 ]
 ```
 ## MacOS
+[![](https://img.icons8.com/fluent/20/000000/download.png)](https://github.com/Esukhia/node-dmp-cli/releases/download/v0.0.3/macos.zip) Download v0.0.3
+
 ```bash
 $ dmp text1.txt text2.txt
 ```
 
 ## Windows
+[![](https://img.icons8.com/fluent/20/000000/download.png)](https://github.com/Esukhia/node-dmp-cli/releases/download/v0.0.3/win.zip) Download v0.0.3
+
 ```bash
 C:\dmp.exe diff text1.txt text2.txt
 ```
